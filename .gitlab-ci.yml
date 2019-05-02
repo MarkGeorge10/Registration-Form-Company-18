@@ -1,0 +1,43 @@
+image: kinoba/docker-custom-php:latest
+
+services:
+    - mysql:5.7
+
+variables:
+    DOCKER_DRIVER: overlay2
+    APP_ENV: test
+    ...
+
+before_script:
+    - php --ini
+    - node --version
+
+    # Install the project's php dependencies
+    - composer install
+
+    # Install the project's node dependencies
+    - yarn config set cache-folder .yarn
+    - yarn install
+    - yarn run encore dev
+
+    - php bin/console doctrine:schema:update --force --env=test
+    - php bin/console doctrine:fixtures:load --env=test
+
+cache:
+    paths:
+        - vendor/
+        - node_modules/
+        - .yarn
+
+test:app:
+    script:
+        - phpunit --configuration phpunit.xml.dist
+
+test:app_js:
+    script:
+        - Xvfb :10 -ac &
+        - export DISPLAY=:10
+        - sleep 3
+        - php bin/console server:start
+        - yarn test
+        - php bin/console server:stop
