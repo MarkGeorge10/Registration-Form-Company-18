@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="We are an independant design and development agency that brings you and your ideas into the real world and gives you a spectacular values">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Missed</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <!--start navbar-->
+        <section class="header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">    
+                  <a class="navbar-brand hidden-lg" href="#">
+                    <span>Company Sign Up</span>  
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="main">
+                    <ul class="navbar-nav ml-auto">
+                     
+                      <li class="nav-item" data-link=".testmonials">
+                        <a class="nav-link" href="signup.html">Sign up</a>
+                      </li>    
+                      <li class="nav-item" data-link=".featured-work">
+                        <a class="nav-link " href="login.html">Login</a>
+                      </li>       
+                    </ul>
+                  </div>
+                </div>        
+            </nav>        
+        </section>
+        <!--strat sign up section-->
+        <section class="contact-us">
+            <div class="container con">
+                <div class="row">
+                    <div class="col-sm-8 data">
+                      <h2 style="text-align: center;opacity: 0.6;margin-bottom: 17px">Join US Now</h2>
+                        
+                      <form role="form" method="POST"  action="register.php" name="sign" id='formdata'>
+                            <div class="form-group">
+                                
+                                <input type="text" name="Cname" class="form-control input-lg" placeholder="Company Name"  style="margin-bottom: 15px">
+                                
+                            </div>
+                            <div class="form-group">
+                                <input type="email"  name="email" class="form-control input-lg" placeholder="Your Email Address" >
+                            </div>
+                            <div class="form-group">
+                                <input type="password"  name="password" class="form-control input-lg" placeholder="Your Password" >
+                            </div>
+                          
+                           <div class="form-group">
+                                <input type="text"  name="location" class="form-control input-lg" placeholder="Your Location">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="number"  name="number_employees" class="form-control input-lg" placeholder="Number of Employees">
+                            </div>
+                            
+                            <div class="form-group">
+                                Marketing <input type="radio" name="interest"style="display: inline-block" value='marketing'>
+                                Development <input type="radio" name="interest" style="display: inline-block" value="development">
+                            </div>
+                            <div class="form-group fl">
+                                <input type="submit" value="Sign UP" name='sign' class="form-control input-lg btn btn-danger">
+                            </div>
+                            
+                       </form>
+                    </div>    
+                </div>
+            </div>
+        </section>    
+        <!--end sign up section-->
+        
+        
+        
+        
+        <script src="javascript/jquery-3.3.1.min.js"></script>
+        <script src="javascript/bootstrap.min.js"></script>   
+    </body>
+</html>
